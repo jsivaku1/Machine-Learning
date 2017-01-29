@@ -1,0 +1,199 @@
+NAME		: JAYANTH SIVAKUMAR
+B-NUMBER	: B00615297	
+B-MAIL		: jsivaku1@binghamton.edu
+
+
+
+Prerequesites:
+==============
+Weka 3.6 jar file or older version
+
+The training set should be renamed as train.arff and test set should be renamed as test.arff or the
+path to train and test should be edited in ModelSelection.java if needed.
+
+
+HOW TO RUN
+==========
+
+1.Untar the tarball which has been uploaded
+2. cd to the directory
+3. Make sure you are on top of the directory
+
+To Compile javac -cp /path/to/file/weka.jar ModelSelection.java 
+
+To Run,
+java -cp /path/to/file/weka.jar:. ModelSelection
+
+
+The following output will be displayed,
+
+OUTPUT:
+=======
+
+Average 10-Fold Cross Validation Error: 2.8421%
+Classifier:J48
+Parameters:
+		unPruned = true
+============================================================================
+Average 10-Fold Cross Validation Error: 3.0000%
+Classifier:J48
+Parameters:
+		ReducedErrorPruning = true
+		MinNumObj = 2
+		NumFolds =3
+============================================================================
+Average 10-Fold Cross Validation Error: 2.8246%
+Classifier:J48
+Parameters:
+		ReducedErrorPruning = true
+		MinNumObj = 1
+		NumFolds =4
+============================================================================
+
+Average 10-Fold Cross Validation Error: 24.7368%
+Classifier:NaiveBayesSimple
+
+============================================================================
+Evaluation on Test set using best classifer
+- - - - - - - - - - - - - - - - - - - - - - 
+Best classifier selected:J48
+Incorrectly classified Instances % = 19.8432%
+Mean Absolute Error = 0.2001
+
+============================================================================
+Classification of test set by best classifier
+ - - - - - - - - - - - - - - - - - - - - - - 
+J48 pruned tree
+------------------
+
+odor = p
+|   bruises = t
+|   |   gill-attachment = f: p (146.0)
+|   |   gill-attachment = a
+|   |   |   gill-spacing = c
+|   |   |   |   gill-size = n: e (20.0)
+|   |   |   |   gill-size = b: p (4.0/1.0)
+|   |   |   gill-spacing = w: p (38.0/1.0)
+|   bruises = f: e (67.0/6.0)
+odor = a
+|   stalk-shape = e
+|   |   gill-spacing = c: e (209.0)
+|   |   gill-spacing = w
+|   |   |   bruises = t: p (3.0)
+|   |   |   bruises = f: e (58.0/6.0)
+|   stalk-shape = t
+|   |   gill-attachment = f: e (26.0)
+|   |   gill-attachment = a
+|   |   |   bruises = t: p (32.0/4.0)
+|   |   |   bruises = f
+|   |   |   |   gill-size = n: e (17.0/2.0)
+|   |   |   |   gill-size = b: p (6.0)
+odor = l
+|   stalk-shape = e
+|   |   gill-spacing = c
+|   |   |   stalk-surface-above-ring = s: e (186.0)
+|   |   |   stalk-surface-above-ring = f: e (0.0)
+|   |   |   stalk-surface-above-ring = k
+|   |   |   |   gill-attachment = f: p (1.0)
+|   |   |   |   gill-attachment = a: e (6.0)
+|   |   |   stalk-surface-above-ring = y: e (8.0)
+|   |   gill-spacing = w
+|   |   |   bruises = t: p (3.0)
+|   |   |   bruises = f: e (44.0/2.0)
+|   stalk-shape = t
+|   |   gill-attachment = f: e (29.0)
+|   |   gill-attachment = a
+|   |   |   bruises = t: p (35.0/4.0)
+|   |   |   bruises = f
+|   |   |   |   gill-size = n: e (13.0/2.0)
+|   |   |   |   gill-size = b: p (9.0)
+odor = n
+|   gill-attachment = f
+|   |   stalk-shape = e
+|   |   |   stalk-surface-above-ring = s
+|   |   |   |   spore-print-color = k: e (32.0)
+|   |   |   |   spore-print-color = n: e (37.0)
+|   |   |   |   spore-print-color = u: e (0.0)
+|   |   |   |   spore-print-color = h: e (16.0/1.0)
+|   |   |   |   spore-print-color = w
+|   |   |   |   |   ring-type = p: p (2.0)
+|   |   |   |   |   ring-type = e: e (90.0)
+|   |   |   |   |   ring-type = l: e (0.0)
+|   |   |   |   |   ring-type = f: e (0.0)
+|   |   |   |   |   ring-type = n: e (0.0)
+|   |   |   |   spore-print-color = r: p (23.0)
+|   |   |   |   spore-print-color = o: e (0.0)
+|   |   |   |   spore-print-color = y: e (0.0)
+|   |   |   |   spore-print-color = b: e (0.0)
+|   |   |   stalk-surface-above-ring = f: e (10.0)
+|   |   |   stalk-surface-above-ring = k: p (16.0/1.0)
+|   |   |   stalk-surface-above-ring = y: e (0.0)
+|   |   stalk-shape = t: e (1400.0/2.0)
+|   gill-attachment = a
+|   |   bruises = t: p (37.0)
+|   |   bruises = f
+|   |   |   gill-size = n
+|   |   |   |   stalk-shape = e: p (1.0)
+|   |   |   |   stalk-shape = t: e (23.0/1.0)
+|   |   |   gill-size = b
+|   |   |   |   gill-spacing = c: e (1.0)
+|   |   |   |   gill-spacing = w: p (5.0)
+odor = f
+|   gill-attachment = f: p (834.0/1.0)
+|   gill-attachment = a
+|   |   gill-size = n: e (69.0/1.0)
+|   |   gill-size = b: p (15.0/7.0)
+odor = c
+|   gill-attachment = f: p (105.0)
+|   gill-attachment = a
+|   |   bruises = t
+|   |   |   gill-spacing = c: e (16.0/1.0)
+|   |   |   gill-spacing = w
+|   |   |   |   gill-size = n: p (30.0)
+|   |   |   |   gill-size = b
+|   |   |   |   |   stalk-shape = e: p (3.0)
+|   |   |   |   |   stalk-shape = t: e (5.0/1.0)
+|   |   bruises = f
+|   |   |   stalk-surface-above-ring = s: p (3.0)
+|   |   |   stalk-surface-above-ring = f
+|   |   |   |   gill-size = n: e (13.0)
+|   |   |   |   gill-size = b: p (2.0)
+|   |   |   stalk-surface-above-ring = k: e (15.0/1.0)
+|   |   |   stalk-surface-above-ring = y: e (26.0/1.0)
+odor = y
+|   stalk-shape = e: e (76.0/5.0)
+|   stalk-shape = t
+|   |   gill-spacing = c: p (32.0)
+|   |   gill-spacing = w
+|   |   |   bruises = t
+|   |   |   |   gill-size = n: p (25.0)
+|   |   |   |   gill-size = b: e (5.0/2.0)
+|   |   |   bruises = f
+|   |   |   |   gill-size = n: e (23.0/1.0)
+|   |   |   |   gill-size = b: p (13.0)
+odor = s
+|   stalk-shape = e: e (81.0/9.0)
+|   stalk-shape = t
+|   |   bruises = t: p (56.0/4.0)
+|   |   bruises = f
+|   |   |   gill-attachment = f: p (20.0)
+|   |   |   gill-attachment = a
+|   |   |   |   gill-size = n: e (19.0/2.0)
+|   |   |   |   gill-size = b: p (5.0)
+odor = m
+|   bruises = t
+|   |   gill-spacing = c
+|   |   |   gill-size = n: e (17.0)
+|   |   |   gill-size = b: p (3.0/1.0)
+|   |   gill-spacing = w: p (40.0/4.0)
+|   bruises = f: e (71.0/7.0)
+
+Number of Leaves  : 	73
+
+Size of the tree : 	122
+
+BUILD SUCCESSFUL (total time: 1 second)
+
+
+
+
